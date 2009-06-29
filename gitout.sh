@@ -4,3 +4,4 @@
 
 git add *
 git commit -am "$0 automatic commit"
+git push
