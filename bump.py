@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-untitled.py
+bump.py
 
 Created by galbrecht on 2009-06-29.
 Copyright (c) 2009 splunk. All rights reserved.
@@ -9,9 +9,11 @@ Copyright (c) 2009 splunk. All rights reserved.
 
 import sys
 import getopt
-import pexpect
 import sys
 import random
+
+sys.path.append('/opt/local/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/')
+import pexpect
 
 help_message = '''
 ports = range of ports to perform operation on, comma separated. e.g: 1,24
@@ -70,7 +72,7 @@ def main(argv=None):
         argv = sys.argv
     try:
         try:
-            opts, args = getopt.getopt(argv[1:], "p:o:", ["ports=","op=","--operation"])
+            opts, args = getopt.getopt(argv[1:], "p:o:", ["ports=","op=","password="])
         except getopt.error, msg:
             raise Usage(msg)
     
