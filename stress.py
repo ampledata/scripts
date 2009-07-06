@@ -14,8 +14,7 @@ import random
 import socket
 
 def main():
-    stressHosts_by_host = ['hulk','tool','me-too','sfeserv27','sfeserv03','gba-ubun810-amd64','gba-ubun810-i386','gba-mac-ppc','gba-macpro','qa-macmini','gba-fbsd63-i386', \
-    'gba-fbsd72-i386','sfeserv35','qa-vfbsd63-i386','qa-vfbsd63-amd64','qa-vubun810-i386','qa-vubun810-amd64','qa-vfc9-i386','qa-vcent52-amd64','qa-vubun904-i386','qa-vubun904-amd64']
+    stressHosts_by_host = ['sfeserv27','sfeserv03','gba-ubun810-amd64','gba-ubun810-i386','gba-mac-ppc','gba-fbsd63-i386','gba-fbsd72-i386']
     
     stressHosts = []
     for sh in range(1,16):
