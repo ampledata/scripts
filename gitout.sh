@@ -1,12 +1,14 @@
 #!/bin/sh
-# script to automatically commit all new files and changes
-# (c)2009 greg albrecht (gba@gregalbrecht.com)
+# script to automatically commit all new files and changes to git
 
-cd $HOME/src/scripts && git add $HOME/src/scripts/*
-git commit -qam "$0 automatic commit" > /dev/null
-git push
+PATH=$PATH:/opt/local/bin
+export PATH
+
+cd $HOME/src/scripts && git --work-tree=$HOME/src/scripts add $HOME/src/scripts/*
+git --work-tree=$HOME/src/scripts commit -qam "$0 automatic commit" 
+git --work-tree=$HOME/src/scripts push
 
 cd $HOME
-git commit -qam "$0 automatic commit" > /dev/null
-git push
+git --work-tree=$HOME commit -qam "$0 automatic commit" 
+git --work-tree=$HOME push
 
